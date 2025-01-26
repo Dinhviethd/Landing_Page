@@ -58,8 +58,8 @@
                     <h3 style="font-weight: lighter; margin-bottom: 10px;">Get Your Free 14-Day Trial</h3>
                     <p style="color: gray; margin-bottom: 30px;">Velis demo enim quia tempor magnet.</p>
                     <form action="">
-                        <input id="typeBox" type="text" placeholder="Company Name*" required>
-                        <input id="typeBox" type="email" placeholder="Email Address*" required>
+                        <input class="Company_Name" id="typeBox" type="text" placeholder="Company Name*" required>
+                        <input class="Email_Address" id="typeBox" type="email" placeholder="Email Address*" required>
                         <select name="" id="typeBox" required>
                             <option value="">We need LaunchPage for...</option>
                             <option value="">Our Support Team</option>
@@ -230,13 +230,13 @@
         </div>
         <div class="Portfolio_container">
             <div class="left">
-                <div class="img_container">
+                <div class="img_container" onclick="openModal(); currentSlide(1)">
                     <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="">
                     <div class="overlay_img">
                         <i class="fa fa-search-plus eye-icon" style="font-size: 38px; color: white"></i>
                     </div>
                 </div>
-                <div class="img_container">
+                <div class="img_container" onclick="openModal(); currentSlide(2)">
                     <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
                     <div class="overlay_img">
                         <i class="fa fa-search-plus eye-icon" style="font-size: 38px; color: white"></i>
@@ -244,20 +244,20 @@
                 </div>
             </div>
             <div class="big">
-                <div class="img_container">
+                <div class="img_container" onclick="openModal(); currentSlide(3)">
                     <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
                     <div class="overlay_img">
                         <i class="fa fa-search-plus eye-icon" style="font-size: 38px; color: white"></i>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="img_container">
+                    <div class="img_container" onclick="openModal(); currentSlide(4)">
                         <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="">
                         <div class="overlay_img">
                             <i class="fa fa-search-plus eye-icon" style="font-size: 38px; color: white"></i>
                         </div>
                     </div>
-                    <div class="img_container">
+                    <div class="img_container" onclick="openModal(); currentSlide(5)">
                         <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" alt="">
                         <div class="overlay_img">
                             <i class="fa fa-search-plus eye-icon" style="font-size: 38px; color: white"></i>
@@ -267,6 +267,29 @@
             </div>
         </div>
     </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content" onclick="closeModal()">
+            <div class="mySlides">
+                <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="">
+            </div>
+            <div class="mySlides">
+                <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" alt="">
+            </div>
+        </div>
+        <i class="fa-solid fa-caret-right next" onclick="plusDivs(-1)"></i>
+        <i class="fa-solid fa-caret-left prev" onclick="plusDivs(1)"></i>
+    </div>
+
     <!-- Our Teams -->
     <div class="our_team" id="team">
         <div class="big_container">

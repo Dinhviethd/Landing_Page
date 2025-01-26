@@ -86,6 +86,9 @@ button{
     color: var(--red);
     background-color: white;
 }
+.icon li a{
+    color: var(--blue);
+}
 .icon a:hover{
     color: var(--red)
 }
@@ -155,6 +158,18 @@ button{
     align-items: center;
     animation: bounce-in 1s;
 }
+.Company_Name{
+    background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/input-user.png) no-repeat 12px 15px;
+    padding-left: 11%!important;
+}
+.Email_Address{
+    background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/input-envelope.png) no-repeat 12px 15px;
+    padding-left: 11%!important;
+}
+.register_form select{
+    background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/input-select.png) no-repeat 12px 15px;
+    padding-left: 11%!important;
+} 
 .register_form{
     display: flex;
     flex-direction: column;
@@ -733,13 +748,13 @@ button{
     line-height: 1.6;
 }
 .red_button:hover, .white_button:hover{
-    transform:scale(1.03)
+    transform:scale(1.03);
 }
 .red_button{
     background-color: var(--red);
     height: 500px;
-    opacity: 0;
-    animation: bounce-in 1.2s 0.5s forwards;
+    /* opacity: 0%; */
+    animation: bounce-in 1.2s 0.5s;
 }
 .red_button a, .white_button a{
     color: var(--red);
@@ -1164,4 +1179,45 @@ option{
     100%{
         opacity: 1;
     }
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+}
+.mySlides {
+    display: none;
+    text-align: center;
+}
+.mySlides img {
+    max-height: 550px;
+    width: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 40px !important;
+    color: gray;
+}
+
+.prev {
+    left: 5%;
+}
+.next {
+    right: 5%;
 }
