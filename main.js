@@ -56,23 +56,51 @@ overlay.addEventListener('click', () => {
 
 
 // Detailed Information in What People Are Saying
-let slideIndex = 1;
+// const getButton = document.getElementById("_btn");
 
+// getButton.addEventListener("click", () => {
+//     const card_info = document.getElementById("card_info");
+
+//     if (card_info.style.display !== "block") {
+//         card_info.style.display = "block";
+//     } else {
+//         card_info.style.display = "none";
+//     }
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".chairman_infor button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const card_info = button.querySelector("p");
+            // Kiểm tra nếu thẻ đang mở thì ẩn đi
+            if (card_info.style.display === "block") {
+                card_info.style.display = "none";
+                return;
+            }
+            document.querySelectorAll(".chairman_infor p").forEach((p) => {
+                p.style.display = "none";
+            });
+            card_info.style.display = "block";
+        });
+    });
+});
+
+
+
+let slideIndex = 1;
 // Mở modal
 function openModal() {
     document.getElementById('imageModal').style.display = 'block';
 }
-
 // Đóng modal
 function closeModal() {
     document.getElementById('imageModal').style.display = 'none';
 }
-
 // Thay đổi slide
 function plusDivs(n) {
     showDivs(slideIndex += n);
 }
-
 // Chuyển đến slide cụ thể
 function currentSlide(n) {
     showDivs(slideIndex = n);
